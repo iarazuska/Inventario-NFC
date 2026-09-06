@@ -1,20 +1,14 @@
 {
-  "canape-cama": {
-    "nombre": "Canapé cama",
+  "armario-arriba": {
+    "nombre": "Armario · parte de arriba",
     "contenido": [
-      "Sábanas de invierno",
-      "Mantas",
-      "Fundas nórdicas",
-      "Maleta pequeña"
+      "Añade aquí lo que guardes"
     ]
   },
-  "armario-dormitorio": {
-    "nombre": "Armario dormitorio",
+  "canape": {
+    "nombre": "Canapé",
     "contenido": [
-      "Abrigos",
-      "Ropa de esquí",
-      "Cinturones",
-      "Documentación"
+      "Añade aquí lo que guardes"
     ]
   }
 }
