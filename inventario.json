@@ -1,0 +1,20 @@
+{
+  "canape-cama": {
+    "nombre": "Canapé cama",
+    "contenido": [
+      "Sábanas de invierno",
+      "Mantas",
+      "Fundas nórdicas",
+      "Maleta pequeña"
+    ]
+  },
+  "armario-dormitorio": {
+    "nombre": "Armario dormitorio",
+    "contenido": [
+      "Abrigos",
+      "Ropa de esquí",
+      "Cinturones",
+      "Documentación"
+    ]
+  }
+}

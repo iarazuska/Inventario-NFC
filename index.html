@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventario Casa</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; }
+    h1 { margin-bottom: 20px; }
+    ul { list-style: none; padding: 0; }
+    li { padding: 10px 8px; border-bottom: 1px solid #eee; }
+  </style>
+</head>
+<body>
+  <h1 id="titulo"></h1>
+  <ul id="lista"></ul>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    fetch("inventario.json")
+      .then(r => r.json())
+      .then(data => {
+        const item = data[id];
+        if (!item) {
+          document.body.innerHTML = "<h2>Ubicación no encontrada</h2>";
+          return;
+        }
+        document.getElementById("titulo").textContent = item.nombre;
+        const lista = document.getElementById("lista");
+        item.contenido.forEach(objeto => {
+          const li = document.createElement("li");
+          li.textContent = objeto;
+          lista.appendChild(li);
+        });
+      })
+      .catch(() => {
+        document.body.innerHTML = "<h2>Error al cargar el inventario</h2>";
+      });
+  </script>
+</body>
+</html>
